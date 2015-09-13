@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Catan</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="buildRoad">Build Road</string>
+    <string name="buildSettlement">Build Settlement</string>
+    <string name="buildCity">Build City</string>
+    <string name="buyDevelopmentCard">Buy Development Card</string>
+    <string name="trade">Trade</string>
+    <string name="playDevelopmentCard">Play Development Card</string>
+
+
+
+
+</resources>
