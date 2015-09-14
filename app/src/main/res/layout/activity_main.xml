@@ -10,7 +10,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#ff33aaff">
+        >
+
+        <edu.up.cs301.catan.BoardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff33aaff"
+            android:id="@+id/displayArea" />
     </FrameLayout>
 
     <TableLayout
