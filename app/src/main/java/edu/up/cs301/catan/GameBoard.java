@@ -103,6 +103,58 @@ public class GameBoard {
         return ((c-z-t*(d*c/p - z))*(a*a+b*b)-(b-y-t*(d*b/p - y))*(b*c)-(a-x-t*(d*a/p - x))*(a*c))/m;
     }
 
+    /**
+     * rotate the game board 5 degrees to the right
+     */
+    public void rotateRight()
+    {
+        theta+=5;
+        if(theta<=-180)
+            theta+=360;
+        else if(theta>180)
+            theta-=360;
+        updateABC();
+    }
+
+    /**
+     * rotate the game board 5 degrees to the left
+     */
+    public void rotateLeft()
+    {
+        theta-=5;
+        if(theta<=-180)
+            theta+=360;
+        else if(theta>180)
+            theta-=360;
+        updateABC();
+    }
+
+    /**
+     * rotate the camera 5 degrees up
+     */
+    public void rotateUp()
+    {
+        phi-=5;
+        if(phi<5)
+            phi=5;
+        else if(phi>80)
+            phi=80;
+        updateABC();
+    }
+
+    /**
+     * rotate the camera 5 degrees down
+     */
+    public void rotateDown()
+    {
+        phi+=5;
+        if(phi<5)
+            phi=5;
+        else if(phi>80)
+            phi=80;
+        updateABC();
+    }
+
     public void drawBoard(Canvas canvas)
     {
         Paint fillColor = new Paint();

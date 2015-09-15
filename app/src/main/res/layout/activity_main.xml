@@ -6,8 +6,8 @@
     tools:context=".MainActivity"
     android:orientation="horizontal">
 
-    <FrameLayout
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         >
@@ -17,7 +17,44 @@
             android:layout_height="match_parent"
             android:background="#ff33aaff"
             android:id="@+id/displayArea" />
-    </FrameLayout>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/upArrow"
+            android:id="@+id/goUpButton"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rightArrow"
+            android:id="@+id/goRightButton"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/downArrow"
+            android:id="@+id/goDownButton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leftArrow"
+            android:id="@+id/goLeftButton"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
 
     <TableLayout
         android:layout_width="wrap_content"

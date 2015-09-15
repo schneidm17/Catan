@@ -10,6 +10,11 @@
     <string name="trade">Trade</string>
     <string name="playDevelopmentCard">Play Development Card</string>
 
+    <string name="upArrow">↑</string>
+    <string name="downArrow">↓</string>
+    <string name="leftArrow">←</string>
+    <string name="rightArrow">→</string>
+
 
 
 
