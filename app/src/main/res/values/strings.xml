@@ -2,7 +2,7 @@
     <string name="app_name">Catan</string>
     <string name="action_settings">Settings</string>
 
-
+    <!--Strings for the main game board side menu-->
     <string name="buildRoad">Build Road</string>
     <string name="buildSettlement">Build Settlement</string>
     <string name="buildCity">Build City</string>
@@ -10,11 +10,20 @@
     <string name="trade">Trade</string>
     <string name="playDevelopmentCard">Play Development Card</string>
 
+    <!--Strings for game board arrow keys-->
     <string name="upArrow">↑</string>
     <string name="downArrow">↓</string>
     <string name="leftArrow">←</string>
     <string name="rightArrow">→</string>
 
+    <!--Strings for the trading menus-->
+    <string name="acceptButton">Accept Trade</string>
+    <string name="wantToTrade">You want to trade:</string>
+    <string name="askingFor">You are asking for:</string>
+    <string name="returnToGame">Return to Game</string>
+    <string name="player1TradeText">Player 1 will trade: Lumber</string>
+    <string name="player2TradeText">Player 2 will not trade</string>
+    <string name="player3TradeText">Player 3 will trade: Ore</string>
 
 
 
