@@ -24,6 +24,9 @@
     <string name="player1TradeText">Player 1 will trade: Lumber</string>
     <string name="player2TradeText">Player 2 will not trade</string>
     <string name="player3TradeText">Player 3 will trade: Ore</string>
+    <string name="title_activity_trading">Trading</string>
+
+    <string name="hello_world">Hello world!</string>
 
 
 
