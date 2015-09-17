@@ -28,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
         tradeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,Trading.class));
+                startActivity(new Intent(MainActivity.this,TradePopup.class));
             }
         });
     }
