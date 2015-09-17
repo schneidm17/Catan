@@ -22,10 +22,6 @@
             android:label="@string/title_activity_trading"
             android:screenOrientation="landscape" >
         </activity>
-        <activity
-            android:name=".TradePopup"
-            android:label="@string/title_activity_trade_popup" >
-        </activity>
     </application>
 
 </manifest>
