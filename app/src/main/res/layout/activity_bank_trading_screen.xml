@@ -5,7 +5,7 @@
     android:layout_centerHorizontal="true"
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true"
-    android:id="@+id/trading_menu"
+    android:id="@+id/bankTradingMenu"
     android:background="#ffffffb2">
 
     <LinearLayout
@@ -19,94 +19,96 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="92dp"
-        android:id="@+id/linearLayout3">
+        android:id="@+id/usersCards">
 
         <ImageView
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="200dp"
-            android:id="@+id/imageView"
-            android:src="@mipmap/rock_card"
-            android:scaleType="fitXY"
-            android:cropToPadding="false"
-            android:focusable="false" />
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:id="@+id/imageView2"
-            android:src="@mipmap/sheep_card"
+            android:id="@+id/userCard1"
+            android:src="@drawable/rock_card"
             android:scaleType="fitXY"
             android:cropToPadding="false"
             android:focusable="false"
-            android:layout_marginLeft="-80dp" />
+            android:layout_margin="5dp" />
 
         <ImageView
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="200dp"
-            android:id="@+id/imageView3"
-            android:src="@mipmap/wheat_card"
+            android:id="@+id/userCard2"
+            android:src="@drawable/sheep_card"
             android:scaleType="fitXY"
             android:cropToPadding="false"
             android:focusable="false"
-            android:layout_marginLeft="-80dp" />
+            android:layout_margin="5dp" />
 
         <ImageView
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="200dp"
-            android:id="@+id/imageView4"
-            android:src="@mipmap/brick_card"
+            android:id="@+id/userCard3"
+            android:src="@drawable/wheat_card"
             android:scaleType="fitXY"
             android:cropToPadding="false"
             android:focusable="false"
-            android:layout_marginLeft="-80dp" />
+            android:layout_margin="5dp" />
 
         <ImageView
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="200dp"
-            android:id="@+id/imageView5"
-            android:src="@mipmap/lumber_card"
+            android:id="@+id/userCard4"
+            android:src="@drawable/brick_card"
             android:scaleType="fitXY"
             android:cropToPadding="false"
             android:focusable="false"
-            android:layout_marginLeft="-80dp" />
+            android:layout_margin="5dp" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:id="@+id/userCard5"
+            android:src="@drawable/lumber_card"
+            android:scaleType="fitXY"
+            android:cropToPadding="false"
+            android:focusable="false"
+            android:layout_margin="5dp" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout3"
+        android:layout_below="@+id/usersCards"
         android:layout_centerHorizontal="true"
-        android:id="@+id/linearLayout5">
+        android:id="@+id/bankDropdowns">
 
         <Spinner
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner" />
+            android:id="@+id/rockCardCount"
+            android:layout_margin="5dp" />
 
         <Spinner
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner3"
-            android:layout_marginLeft="20dp" />
+            android:id="@+id/sheepCardCount"
+            android:layout_margin="5dp" />
 
         <Spinner
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner4"
-            android:layout_marginLeft="20dp" />
+            android:id="@+id/wheatCardCount"
+            android:layout_margin="5dp" />
 
         <Spinner
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner2"
-            android:layout_marginLeft="20dp" />
+            android:id="@+id/brickCardCount"
+            android:layout_margin="5dp" />
 
         <Spinner
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner5"
-            android:layout_marginLeft="20dp" />
+            android:id="@+id/lumberCardCount"
+            android:layout_margin="5dp" />
     </LinearLayout>
 
     <Button
@@ -118,15 +120,15 @@
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="31dp"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/linearLayout3"
-        android:layout_toEndOf="@+id/linearLayout3" />
+        android:layout_toRightOf="@+id/usersCards"
+        android:layout_toEndOf="@+id/usersCards" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/makeTrade"
         android:id="@+id/tradeWithBank"
-        android:layout_below="@+id/linearLayout5"
+        android:layout_below="@+id/bankDropdowns"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
         android:textSize="30dp" />
