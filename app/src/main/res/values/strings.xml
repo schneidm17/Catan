@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Catan</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_player_trading_screen">PlayerTradingScreen</string>
+    <string name="title_activity_bank_trading_screen">BankTradingScreen</string>
 
     <!--Strings for the main game board side menu-->
     <string name="buildRoad">Build Road</string>
@@ -16,6 +18,11 @@
     <string name="leftArrow">←</string>
     <string name="rightArrow">→</string>
 
+    <!--Strings for the trading popup-->
+    <string name="tradePopupTitle">What type of trade would you like to do?</string>
+    <string name="tradeWithBank">Trade With Bank</string>
+    <string name="tradeWithPlayers">Trade With Other Players</string>
+
     <!--Strings for the trading menus-->
     <string name="acceptButton">Accept Trade</string>
     <string name="wantToTrade">You want to trade:</string>
@@ -24,11 +31,7 @@
     <string name="player1TradeText">Player 1 will trade: Lumber</string>
     <string name="player2TradeText">Player 2 will not trade</string>
     <string name="player3TradeText">Player 3 will trade: Ore</string>
-    <string name="title_activity_trading">Trading</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_trade_popup">TradePopup</string>
-
+    <string name="makeTrade">Trade with Bank</string>
 
 
 </resources>

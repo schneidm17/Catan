@@ -1,47 +1,38 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <LinearLayout
+    android:orientation="vertical"
+    android:background="#659bff"
+    android:layout_margin="20dp"
+    android:id="@+id/tradePopupLayout"
+    android:padding="10dp">
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#659bff">
-        >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="20dp">
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="What type of trade would you like to do?"
-                android:id="@+id/tradePopupTitle"
-                android:textSize="30sp"
-                android:textColor="#000100"
-                android:textStyle="bold" />
+        android:text="@string/tradePopupTitle"
+        android:id="@+id/tradePopupTitle"
+        android:textSize="30sp"
+        android:textColor="#000100"
+        android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/tradeWithBank"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Trade With Bank"
-                android:textSize="30sp" />
+    <Button
+        android:id="@+id/tradeWithPlayers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tradeWithPlayers"
+        android:textSize="30sp" />
 
-            <Button
-                android:id="@+id/tradeWithPlayers"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Trade With Other Players"
-                android:textSize="30sp" />
+    <Button
+        android:id="@+id/tradeWithBank"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tradeWithBank"
+        android:textSize="30sp" />
 
-            <Button
-                android:id="@+id/goBack"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Go Back"
-                android:textSize="30sp" />
-        </LinearLayout>
-    </LinearLayout>
-</RelativeLayout>
+    <Button
+        android:id="@+id/exitTradePopup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/returnToGame"
+        android:textSize="30sp" />
+</LinearLayout>

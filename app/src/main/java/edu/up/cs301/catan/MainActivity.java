@@ -12,9 +12,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.PopupWindow;
 
-import static edu.up.cs301.catan.GameBoard.*;
-
-
 public class MainActivity extends ActionBarActivity {
 
 
@@ -23,10 +20,11 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        goToPlayerTradingMenu();
-    }
+        goToTradingPopup();
+    }//onCreate
 
-    private void goToPlayerTradingMenu() {
+    //Function to open a popup containing the trading options
+    private void goToTradingPopup() {
         final Button btnOpenPopup = (Button)findViewById(R.id.tradeButton);
         btnOpenPopup.setOnClickListener(new Button.OnClickListener() {
 
@@ -37,11 +35,11 @@ public class MainActivity extends ActionBarActivity {
                         .getSystemService(LAYOUT_INFLATER_SERVICE);
                 View popupView = layoutInflater.inflate(R.layout.activity_trade_popup, null);
                 final PopupWindow popupWindow = new PopupWindow(
-                        popupView,
-                        ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+                        popupView,ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                         popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
 
-                Button btnDismiss = (Button) popupView.findViewById(R.id.goBack);
+                //Dismisses the popup when the return to game button is clicked
+                Button btnDismiss = (Button) popupView.findViewById(R.id.exitTradePopup);
                 btnDismiss.setOnClickListener(new Button.OnClickListener() {
 
                     @Override
@@ -50,21 +48,23 @@ public class MainActivity extends ActionBarActivity {
                     }
                 });
 
+                //Goes to the player trading page when the trade with player button is pressed
                 Button tradePlayerButton = (Button) popupView.findViewById(R.id.tradeWithPlayers);
                 tradePlayerButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         popupWindow.dismiss();
-                        startActivity(new Intent(MainActivity.this, Trading.class));
+                        startActivity(new Intent(MainActivity.this, PlayerTradingScreen.class));
                     }
                 });
 
+                //Goes to the trade with bank page when the trade with bank button is pressed
                 Button tradeBankButton = (Button) popupView.findViewById(R.id.tradeWithBank);
                 tradeBankButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         popupWindow.dismiss();
-                        startActivity(new Intent(MainActivity.this, Trading.class));
+                        startActivity(new Intent(MainActivity.this, BankTradingScreen.class));
                     }
                 });
 
@@ -72,14 +72,14 @@ public class MainActivity extends ActionBarActivity {
 
             }
         });
-    }
+    }//goToTradingPopup
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }
+    }//onCreateOptionsMenu
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -94,5 +94,6 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-}
+    }//onOptionsItemSelected
+
+}//MainActivity

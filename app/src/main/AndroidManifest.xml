@@ -18,9 +18,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Trading"
-            android:label="@string/title_activity_trading"
+            android:name=".PlayerTradingScreen"
+            android:label="@string/title_activity_player_trading_screen"
             android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".BankTradingScreen"
+            android:label="@string/title_activity_bank_trading_screen" >
         </activity>
     </application>
 
