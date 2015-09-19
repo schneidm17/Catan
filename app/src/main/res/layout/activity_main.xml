@@ -15,7 +15,7 @@
         <edu.up.cs301.catan.BoardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ff33aaff"
+            android:background="#ff00A1E1"
             android:id="@+id/displayArea" />
 
         <Button
