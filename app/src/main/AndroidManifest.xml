@@ -26,6 +26,16 @@
             android:name=".BankTradingScreen"
             android:label="@string/title_activity_bank_trading_screen" >
         </activity>
+        <activity
+            android:name=".OpeningMenu"
+            android:label="@string/title_activity_opening_menu"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".NewGameMenu"
+            android:label="@string/title_activity_new_game_menu"
+            android:screenOrientation="landscape">
+        </activity>
     </application>
 
 </manifest>
