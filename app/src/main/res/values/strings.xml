@@ -37,6 +37,7 @@
     <string name="random_map">Randomize map?</string>
     <string name="nice_mode_str">Nice Beginning?</string>
     <string name="hard_mode_str">Hard Mode?</string>
+    <string name="hide_res_str">Hide Resource Counts?</string>
     <string name="choose_color">Choose your color:</string>
     <string name="blue">Blue</string>
     <string name="white">White</string>

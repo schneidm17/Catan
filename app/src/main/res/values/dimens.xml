@@ -13,6 +13,6 @@
 
     <!-- Dimensions used for opening/new game menus. -->
     <dimen name="opening_menu_button_width">400dp</dimen>
-    <dimen name="new_game_option_width">385dp</dimen>
+    <dimen name="new_game_option_width">490dp</dimen>
     <dimen name="new_game_switch_width">100dp</dimen>
 </resources>
