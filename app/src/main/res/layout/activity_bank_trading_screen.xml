@@ -1,3 +1,7 @@
+<!--@author: Jordan Goldey-->
+<!--@date: 9/19/2015-->
+<!--@purpose: Menu for making a trade with the bank.-->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -6,7 +10,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true"
     android:id="@+id/bankTradingMenu"
-    android:background="#ffffffb2">
+    android:background="@color/MenuColor">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -22,54 +26,54 @@
         android:id="@+id/usersCards">
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="200dp"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
             android:id="@+id/userCard1"
             android:src="@drawable/rock_card"
             android:scaleType="fitXY"
             android:cropToPadding="false"
             android:focusable="false"
-            android:layout_margin="5dp" />
+            android:layout_margin="@dimen/card_margin" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="200dp"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
             android:id="@+id/userCard2"
             android:src="@drawable/sheep_card"
             android:scaleType="fitXY"
             android:cropToPadding="false"
             android:focusable="false"
-            android:layout_margin="5dp" />
+            android:layout_margin="@dimen/card_margin" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="200dp"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
             android:id="@+id/userCard3"
             android:src="@drawable/wheat_card"
             android:scaleType="fitXY"
             android:cropToPadding="false"
             android:focusable="false"
-            android:layout_margin="5dp" />
+            android:layout_margin="@dimen/card_margin" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="200dp"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
             android:id="@+id/userCard4"
             android:src="@drawable/brick_card"
             android:scaleType="fitXY"
             android:cropToPadding="false"
             android:focusable="false"
-            android:layout_margin="5dp" />
+            android:layout_margin="@dimen/card_margin" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="200dp"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/card_height"
             android:id="@+id/userCard5"
             android:src="@drawable/lumber_card"
             android:scaleType="fitXY"
             android:cropToPadding="false"
             android:focusable="false"
-            android:layout_margin="5dp" />
+            android:layout_margin="@dimen/card_margin" />
     </LinearLayout>
 
     <LinearLayout
@@ -81,34 +85,34 @@
         android:id="@+id/bankDropdowns">
 
         <Spinner
-            android:layout_width="150dp"
+            android:layout_width="@dimen/card_width"
             android:layout_height="wrap_content"
             android:id="@+id/rockCardCount"
-            android:layout_margin="5dp" />
+            android:layout_margin="@dimen/card_margin" />
 
         <Spinner
-            android:layout_width="150dp"
+            android:layout_width="@dimen/card_width"
             android:layout_height="wrap_content"
             android:id="@+id/sheepCardCount"
-            android:layout_margin="5dp" />
+            android:layout_margin="@dimen/card_margin" />
 
         <Spinner
-            android:layout_width="150dp"
+            android:layout_width="@dimen/card_width"
             android:layout_height="wrap_content"
             android:id="@+id/wheatCardCount"
-            android:layout_margin="5dp" />
+            android:layout_margin="@dimen/card_margin" />
 
         <Spinner
-            android:layout_width="150dp"
+            android:layout_width="@dimen/card_width"
             android:layout_height="wrap_content"
             android:id="@+id/brickCardCount"
-            android:layout_margin="5dp" />
+            android:layout_margin="@dimen/card_margin" />
 
         <Spinner
-            android:layout_width="150dp"
+            android:layout_width="@dimen/card_width"
             android:layout_height="wrap_content"
             android:id="@+id/lumberCardCount"
-            android:layout_margin="5dp" />
+            android:layout_margin="@dimen/card_margin" />
     </LinearLayout>
 
     <Button
@@ -131,7 +135,7 @@
         android:layout_below="@+id/bankDropdowns"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="33dp"
-        android:textSize="30dp" />
+        android:textSize="@dimen/trading_text_size" />
 
 </RelativeLayout>
 

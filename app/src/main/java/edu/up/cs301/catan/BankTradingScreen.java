@@ -7,6 +7,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+/* @author: Jordan Goldey
+ * @date: 9/19/2015
+ * @purpose: Controls the bank trading screen that allows the players to trade a set number of one
+ *           resource cards for a different resource card.
+ */
 public class BankTradingScreen extends AppCompatActivity {
 
     @Override
