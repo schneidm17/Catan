@@ -13,7 +13,7 @@ public class OpeningMenu extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.opening_menu);
+        setContentView(R.layout.activity_opening_menu);
     }
 
     public void openNewGame(View view) {

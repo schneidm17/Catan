@@ -40,7 +40,7 @@
             android:typeface="serif"
             android:textSize="65sp"
             android:textStyle="italic"
-            android:textColor="Color.BLACK" />
+            android:textColor="@color/Black" />
 
         <LinearLayout
             android:orientation="horizontal"

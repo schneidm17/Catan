@@ -6,4 +6,5 @@
     <color name="RedPlayer">#ff1300</color>
     <color name="WhitePlayer">#ffffffff</color>
     <color name="MenuColor">#ffffffb2</color>
+    <color name="Black">#ff000000</color>
 </resources>

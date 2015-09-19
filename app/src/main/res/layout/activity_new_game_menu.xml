@@ -19,7 +19,7 @@
             android:text="@string/new_game_options"
             android:id="@+id/new_game_title"
             android:layout_gravity="center_horizontal"
-            android:textColor="Color.BLACK"
+            android:textColor="@color/Black"
             android:textSize="70sp"
             android:typeface="serif"
             android:textStyle="bold" />
@@ -37,7 +37,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/random_map"
                 android:id="@+id/random_text"
-                android:textColor="Color.BLACK"
+                android:textColor="@color/Black"
                 android:textSize="50sp"
                 android:gravity="center_horizontal" />
 
