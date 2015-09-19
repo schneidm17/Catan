@@ -3,7 +3,13 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-
+    <!--Dimensions for the trading with bank and player screens-->
+    <dimen name="card_width">150dp</dimen>;
+    <dimen name="card_height">200dp</dimen>;
+    <dimen name="card_margin">5dp</dimen>
+    <dimen name="player_color_width">300dp</dimen>
+    <dimen name="card_centering_padding">75dp</dimen>
+    <dimen name="trading_text_size">25sp</dimen>
 
     <!-- Dimensions used for opening/new game menus. -->
     <dimen name="opening_menu_button_width">400dp</dimen>

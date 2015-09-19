@@ -12,8 +12,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.PopupWindow;
 
+/* @author: Jordan Goldey, Jarrett Oney, Matthew Schneider
+ * @date: 9/19/2015
+ * @purpose: Contains the main game board, the action menu, player stats, etc.
+ */
 public class MainActivity extends ActionBarActivity {
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,18 +28,18 @@ public class MainActivity extends ActionBarActivity {
 
     //Function to open a popup containing the trading options
     private void goToTradingPopup() {
+        //Sets a listener on the button to open the trade popup
         final Button btnOpenPopup = (Button)findViewById(R.id.tradeButton);
         btnOpenPopup.setOnClickListener(new Button.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
-                LayoutInflater layoutInflater
-                        = (LayoutInflater) getBaseContext()
-                        .getSystemService(LAYOUT_INFLATER_SERVICE);
+                LayoutInflater layoutInflater = (LayoutInflater) getBaseContext().getSystemService(LAYOUT_INFLATER_SERVICE);
+
+                //Opens up the popup at the center of the screen
                 View popupView = layoutInflater.inflate(R.layout.activity_trade_popup, null);
-                final PopupWindow popupWindow = new PopupWindow(
-                        popupView,ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-                        popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+                final PopupWindow popupWindow = new PopupWindow(popupView,ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
 
                 //Dismisses the popup when the return to game button is clicked
                 Button btnDismiss = (Button) popupView.findViewById(R.id.exitTradePopup);
