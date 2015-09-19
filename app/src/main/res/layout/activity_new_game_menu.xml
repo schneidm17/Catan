@@ -32,14 +32,13 @@
             android:gravity="center_horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="75dp"
+                android:layout_width="385dp"
+                android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/random_map"
                 android:id="@+id/random_text"
                 android:textColor="@color/Black"
-                android:textSize="50sp"
-                android:gravity="center_horizontal" />
+                android:textSize="40dp" />
 
             <Switch
                 android:layout_width="100dp"
@@ -57,11 +56,11 @@
 
             <TextView
                 android:layout_width="385dp"
-                android:layout_height="75dp"
+                android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/nice_mode_str"
                 android:id="@+id/nice_text"
-                android:textSize="50sp" />
+                android:textSize="40sp" />
 
             <Switch
                 android:layout_width="100dp"
@@ -79,11 +78,11 @@
 
             <TextView
                 android:layout_width="385dp"
-                android:layout_height="75dp"
+                android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="@string/hard_mode_str"
                 android:id="@+id/hard_text"
-                android:textSize="50sp" />
+                android:textSize="40dp" />
 
             <Switch
                 android:layout_width="100dp"
@@ -104,7 +103,7 @@
             android:text="@string/choose_computers"
             android:id="@+id/ai_choose_text"
             android:layout_gravity="center_horizontal"
-            android:textSize="50dp" />
+            android:textSize="45dp" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -117,14 +116,14 @@
                 android:layout_height="wrap_content"
                 android:text="2"
                 android:id="@+id/ai_2"
-                android:textSize="45sp" />
+                android:textSize="40sp" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3"
                 android:id="@+id/ai_3"
-                android:textSize="45sp" />
+                android:textSize="40sp" />
         </RadioGroup>
 
         <TextView
@@ -139,7 +138,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="@string/choose_color"
             android:id="@+id/choose_color_text"
-            android:textSize="50sp"
+            android:textSize="45dp"
             android:layout_gravity="center" />
 
         <RadioGroup
@@ -154,7 +153,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/blue"
                 android:id="@+id/blue_button"
-                android:textSize="45sp"
+                android:textSize="40dp"
                 android:buttonTint="@color/BluePlayer" />
 
             <RadioButton
@@ -162,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/white"
                 android:id="@+id/white_button"
-                android:textSize="45sp"
+                android:textSize="40dp"
                 android:buttonTint="@color/WhitePlayer" />
 
             <RadioButton
@@ -170,7 +169,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/red"
                 android:id="@+id/red_button"
-                android:textSize="45sp"
+                android:textSize="40dp"
                 android:buttonTint="@color/RedPlayer" />
 
             <RadioButton
@@ -178,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/orange"
                 android:id="@+id/orange_button"
-                android:textSize="45sp"
+                android:textSize="40dp"
                 android:buttonTint="@color/OrangePlayer" />
         </RadioGroup>
 
@@ -188,7 +187,9 @@
             android:text="@string/start_game"
             android:id="@+id/start_button"
             android:layout_gravity="center_horizontal"
-            android:textSize="50sp" />
+            android:textSize="50sp"
+            android:onClick="makeNewGame"
+            android:nestedScrollingEnabled="true" />
 
     </LinearLayout>
 </RelativeLayout>
