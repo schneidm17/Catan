@@ -1,0 +1,293 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:id="@+id/trading_menu"
+    android:background="#ffffffb2"
+    android:gravity="center"
+    android:paddingStart="60dp"
+    android:paddingEnd="0dp"
+    android:paddingLeft="60dp"
+    android:paddingRight="0dp">
+
+    <TableRow
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/player_cards">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/player1_card_background"
+            android:background="@color/OrangePlayer">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:id="@+id/player1_card"
+                android:src="@drawable/lumber_card"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:focusable="false"
+                android:layout_marginLeft="75dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/player2_card_background"
+            android:background="@color/BluePlayer">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:id="@+id/player2_card"
+                android:src="@drawable/card_backs"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:focusable="false"
+                android:layout_marginLeft="75dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/player3_card_background"
+            android:background="@color/RedPlayer" >
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:id="@+id/player3_card"
+                android:src="@drawable/rock_card"
+                android:cropToPadding="false"
+                android:focusable="false"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="75dp" />
+
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/player_text">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/player1TradeText"
+            android:id="@+id/player1_text"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:background="@color/OrangePlayer"
+            android:singleLine="false"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/player2TradeText"
+            android:id="@+id/player2_text"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:background="@color/BluePlayer"
+            android:singleLine="false"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/player3TradeText"
+            android:id="@+id/player3_text"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:background="@color/RedPlayer"
+            android:singleLine="false"
+            android:gravity="center"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/accept_buttons">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/acceptButton"
+            android:id="@+id/player1_accept"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/acceptButton"
+            android:id="@+id/player2_accept"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/acceptButton"
+            android:id="@+id/player3_accept"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/user_cards">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:layout_gravity="center"
+            android:layout_column="0"
+            android:layout_span="3">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:id="@+id/user_card1"
+                android:src="@drawable/rock_card"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:focusable="false"
+                android:layout_margin="5dp" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:id="@+id/user_card2"
+                android:src="@drawable/sheep_card"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:focusable="false"
+                android:layout_margin="5dp" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:id="@+id/user_card3"
+                android:src="@drawable/wheat_card"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:focusable="false"
+                android:layout_margin="5dp" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:id="@+id/user_card4"
+                android:src="@drawable/brick_card"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:focusable="false"
+                android:layout_margin="5dp" />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:id="@+id/user_card5"
+                android:src="@drawable/lumber_card"
+                android:scaleType="fitXY"
+                android:cropToPadding="false"
+                android:focusable="false"
+                android:layout_margin="5dp" />
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/want_to_trade"
+        android:gravity="clip_horizontal|clip_vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="3"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/wantToTrade"
+                android:id="@+id/user_tradeText"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:singleLine="false"/>
+
+            <Spinner
+                android:layout_width="150dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/user_trade_dropdown"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/asking_for">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_span="3"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/askingFor"
+                android:id="@+id/user_wantText"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:singleLine="false"/>
+
+            <Spinner
+                android:layout_width="150dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/user_want_dropdown"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/returnToGame"
+            android:id="@+id/returnToGame"
+            android:layout_column="2"
+            android:layout_gravity="bottom|center" />
+    </TableRow>
+
+</TableLayout>
