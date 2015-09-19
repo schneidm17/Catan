@@ -46,22 +46,23 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            >
 
             <Button
-                android:layout_width="400dp"
-                android:layout_height="match_parent"
+                android:layout_width="@dimen/opening_menu_button_width"
+                android:layout_height="wrap_content"
                 android:text="@string/new_game"
                 android:id="@+id/new_game"
                 android:onClick="openNewGame"
-                android:textSize="70dp" />
+                android:textSize="70sp" />
 
             <Button
-                android:layout_width="400dp"
-                android:layout_height="211dp"
+                android:layout_width="@dimen/opening_menu_button_width"
+                android:layout_height="wrap_content"
                 android:text="@string/tutorial"
                 android:id="@+id/button"
-                android:textSize="70dp" />
+                android:textSize="70sp" />
         </LinearLayout>
 
         <LinearLayout
