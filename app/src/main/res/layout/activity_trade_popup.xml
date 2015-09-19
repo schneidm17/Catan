@@ -2,7 +2,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="#659bff"
+    android:background="@color/MenuColor"
     android:layout_margin="20dp"
     android:id="@+id/tradePopupLayout"
     android:padding="10dp">

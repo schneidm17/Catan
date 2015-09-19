@@ -6,7 +6,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true"
     android:id="@+id/bankTradingMenu"
-    android:background="#ffffffb2">
+    android:background="@color/MenuColor">
 
     <LinearLayout
         android:orientation="horizontal"

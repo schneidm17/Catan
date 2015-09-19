@@ -6,7 +6,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true"
     android:id="@+id/trading_menu"
-    android:background="#ffffffb2"
+    android:background="@color/MenuColor"
     android:gravity="center"
     android:paddingStart="60dp"
     android:paddingEnd="0dp"
