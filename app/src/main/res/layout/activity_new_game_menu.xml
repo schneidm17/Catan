@@ -1,194 +1,198 @@
 
+<!--@author: Jarrett Oney                  -->
+<!--@date:   9/19/2015                     -->
+<!--@desc:   This screen shows the possible-->
+<!--         options for the game          -->
 
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.oney18up.socopeningmenu.NewGameMenu"
+    android:background="@color/MenuColor"
+    android:orientation="vertical"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/new_game_options"
+        android:id="@+id/new_game_title"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/Black"
+        android:textSize="70sp"
+        android:typeface="serif"
+        android:textStyle="bold" />
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="edu.oney18up.socopeningmenu.NewGameMenu"
-        android:background="@color/MenuColor"
-        android:orientation="vertical"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/random_bar"
+        android:gravity="center_horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/new_game_option_width"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/new_game_options"
-            android:id="@+id/new_game_title"
-            android:layout_gravity="center_horizontal"
+            android:text="@string/random_map"
+            android:id="@+id/random_text"
             android:textColor="@color/Black"
-            android:textSize="70sp"
-            android:typeface="serif"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/random_bar"
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:layout_width="@dimen/new_game_option_width"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/random_map"
-                android:id="@+id/random_text"
-                android:textColor="@color/Black"
-                android:textSize="45sp" />
-
-            <Switch
-                android:layout_width="100dp"
-                android:layout_height="fill_parent"
-                android:id="@+id/random_switch" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/nice_bar"
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:layout_width="@dimen/new_game_option_width"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/nice_mode_str"
-                android:id="@+id/nice_text"
-                android:textSize="45sp" />
-
-            <Switch
-                android:layout_width="@dimen/new_game_switch_width"
-                android:layout_height="fill_parent"
-                android:id="@+id/nice_switch" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/hard_bar"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal">
-
-            <TextView
-                android:layout_width="@dimen/new_game_option_width"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/hard_mode_str"
-                android:id="@+id/hard_text"
-                android:textSize="45sp" />
-
-            <Switch
-                android:layout_width="@dimen/new_game_switch_width"
-                android:layout_height="fill_parent"
-                android:id="@+id/hard_switch" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="12dp"
-            android:id="@+id/spacer2"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/choose_computers"
-            android:id="@+id/ai_choose_text"
-            android:layout_gravity="center_horizontal"
             android:textSize="45sp" />
 
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2"
-                android:id="@+id/ai_2"
-                android:textSize="40sp" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3"
-                android:id="@+id/ai_3"
-                android:textSize="40sp" />
-        </RadioGroup>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="12dp"
-            android:id="@+id/spacer"
-            android:layout_gravity="center_horizontal" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/choose_color"
-            android:id="@+id/choose_color_text"
-            android:textSize="45sp"
-            android:layout_gravity="center" />
-
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/color_cjoices"
-            android:orientation="horizontal"
-            android:layout_gravity="center_horizontal">
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/blue"
-                android:id="@+id/blue_button"
-                android:textSize="40sp"
-                android:buttonTint="@color/BluePlayer"
-                android:enabled="true" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/white"
-                android:id="@+id/white_button"
-                android:textSize="40sp"
-                android:buttonTint="@color/WhitePlayer" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/red"
-                android:id="@+id/red_button"
-                android:textSize="40sp"
-                android:buttonTint="@color/RedPlayer" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/orange"
-                android:id="@+id/orange_button"
-                android:textSize="40sp"
-                android:buttonTint="@color/OrangePlayer" />
-        </RadioGroup>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/start_game"
-            android:id="@+id/start_button"
-            android:layout_gravity="center_horizontal"
-            android:textSize="50sp"
-            android:onClick="makeNewGame"
-            android:nestedScrollingEnabled="true" />
+        <Switch
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/random_switch" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/nice_bar"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="@dimen/new_game_option_width"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/nice_mode_str"
+            android:id="@+id/nice_text"
+            android:textSize="45sp" />
+
+        <Switch
+            android:layout_width="@dimen/new_game_switch_width"
+            android:layout_height="fill_parent"
+            android:id="@+id/nice_switch" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hard_bar"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="@dimen/new_game_option_width"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/hard_mode_str"
+            android:id="@+id/hard_text"
+            android:textSize="45sp" />
+
+        <Switch
+            android:layout_width="@dimen/new_game_switch_width"
+            android:layout_height="fill_parent"
+            android:id="@+id/hard_switch" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/spacer2"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/choose_computers"
+        android:id="@+id/ai_choose_text"
+        android:layout_gravity="center_horizontal"
+        android:textSize="45sp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:id="@+id/num_ai_group">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/ai_2"
+            android:textSize="40sp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/ai_3"
+            android:textSize="40sp" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/spacer"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/choose_color"
+        android:id="@+id/choose_color_text"
+        android:textSize="45sp"
+        android:layout_gravity="center" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/color_choices"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blue"
+            android:id="@+id/blue_button"
+            android:textSize="40sp"
+            android:buttonTint="@color/BluePlayer"
+            android:enabled="true" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/white"
+            android:id="@+id/white_button"
+            android:textSize="40sp"
+            android:buttonTint="@color/WhitePlayer" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/red"
+            android:id="@+id/red_button"
+            android:textSize="40sp"
+            android:buttonTint="@color/RedPlayer" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/orange"
+            android:id="@+id/orange_button"
+            android:textSize="40sp"
+            android:buttonTint="@color/OrangePlayer" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_game"
+        android:id="@+id/start_button"
+        android:layout_gravity="center_horizontal"
+        android:textSize="50sp"
+        android:onClick="makeNewGame"
+        android:nestedScrollingEnabled="true" />
+
+</LinearLayout>

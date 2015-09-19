@@ -16,6 +16,10 @@ public class OpeningMenu extends Activity {
         setContentView(R.layout.activity_opening_menu);
     }
 
+    /*
+     * this method is used to create the
+     * new game options activity
+     */
     public void openNewGame(View view) {
         Intent intent = new Intent(this, NewGameMenu.class);
         startActivity(intent);

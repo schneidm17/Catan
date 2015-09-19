@@ -16,6 +16,9 @@ public class NewGameMenu extends ActionBarActivity {
         setContentView(R.layout.activity_new_game_menu);
     }
 
+    /*
+     * this method is used to create the main game activity
+     */
     public void makeNewGame(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
