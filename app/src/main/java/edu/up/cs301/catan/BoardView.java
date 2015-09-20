@@ -10,14 +10,14 @@ import android.widget.Button;
 /**
  * Created by schneidm17 on 9/13/2015.
  */
-public class BoardView extends SurfaceView{
+public class BoardView extends SurfaceView {
 
     protected GameBoard myGameBoard;
 
     public BoardView(Context context, AttributeSet attrs) {
         super(context, attrs);
         setWillNotDraw(false);
-        myGameBoard = new GameBoard(0,0);
+        myGameBoard = new GameBoard(0, 0);
     }
 
     @Override
