@@ -7,7 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".OpeningMenu"
     android:background="@color/MenuColor"
     android:orientation="vertical"
     android:layout_centerVertical="true"
@@ -22,7 +22,8 @@
         <ImageView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/main_title" />
+            android:src="@drawable/main_title"
+            android:contentDescription="@string/title_desc" />
 
     </FrameLayout>
 
@@ -45,7 +46,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/button_bar">
+        android:id="@+id/button_bar"
+        style="?android:attr/buttonBarButtonStyle">
 
         <Button
             android:layout_width="@dimen/opening_menu_button_width"
@@ -53,14 +55,16 @@
             android:text="@string/new_game"
             android:id="@+id/new_game_button"
             android:onClick="openNewGame"
-            android:textSize="70sp" />
+            android:textSize="70sp"
+            style="?android:attr/buttonBarButtonStyle"/>
 
         <Button
             android:layout_width="@dimen/opening_menu_button_width"
             android:layout_height="wrap_content"
             android:text="@string/tutorial"
             android:id="@+id/tutorial_button"
-            android:textSize="70sp" />
+            android:textSize="70sp"
+            style="?android:attr/buttonBarButtonStyle"/>
     </LinearLayout>
 
 </LinearLayout>

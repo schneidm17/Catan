@@ -13,15 +13,13 @@ public class GameBoard extends Graphics {
     public GameBoard(int phi, int theta) {
         super(phi, theta);
     }
+    public Paint squareColor[] = {stone, wool, wood, wheat, brick, wool, brick,
+            wheat, wood, sand, wood, stone, wood, stone, wheat, wool, brick, wheat, wool};
 
     public void drawBoard(Canvas canvas) {
         Paint coastColor = new Paint();
-        coastColor.setColor(0xFFC2B280);
+        coastColor.setColor(0xFFE2C581);
         coastColor.setStyle(Paint.Style.FILL);
-
-        Paint fillColor = new Paint();
-        fillColor.setColor(Color.GREEN);
-        fillColor.setStyle(Paint.Style.FILL);
 
         Paint strokeColor = new Paint();
         strokeColor.setColor(Color.BLACK);
@@ -44,9 +42,10 @@ public class GameBoard extends Graphics {
         canvas.drawPath(coast, coastColor);
         canvas.drawPath(coast, strokeColor);
 
-        for (double[] tile : tiles) {
-            double x = tile[0];
-            double y = tile[1];
+        for (int i=0; i<19; i++) {
+
+            double x = tiles[i][0];
+            double y = tiles[i][1];
 
             Path hex = new Path();
             hex.moveTo(centerX + (float) (scale * getx(x + 2, y, 0)), centerY + (float) (scale * gety(x + 2, y, 0)));
@@ -57,7 +56,7 @@ public class GameBoard extends Graphics {
             hex.lineTo(centerX + (float) (scale * getx(x + 1, y - Math.sqrt(3), 0)), centerY + (float) (scale * gety(x + 1, y - Math.sqrt(3), 0)));
             hex.close();
 
-            canvas.drawPath(hex, fillColor);
+            canvas.drawPath(hex, squareColor[i]);
             canvas.drawPath(hex, strokeColor);
         }
 

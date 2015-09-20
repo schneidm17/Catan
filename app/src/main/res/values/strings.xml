@@ -37,6 +37,7 @@
     <string name="random_map">Randomize map?</string>
     <string name="nice_mode_str">Nice Beginning?</string>
     <string name="hard_mode_str">Hard Mode?</string>
+    <string name="hide_res_str">Hide Resource Counts?</string>
     <string name="choose_color">Choose your color:</string>
     <string name="blue">Blue</string>
     <string name="white">White</string>
@@ -44,6 +45,8 @@
     <string name="orange">Orange</string>
     <string name="start_game">Start Game</string>
     <string name="choose_computers">Choose the number of AI players:</string>
+    <string name="two_ai">2</string>
+    <string name="three_ai">3</string>
 
     <!--Strings for the opening menu-->
     <string name="welcome_message">Welcome to Settlers of Catan!</string>
@@ -52,6 +55,7 @@
     <string name="title_activity_new_game">newGameActivity</string>
     <string name="new_game_options">New Game Options</string>
     <string name="title_activity_opening_menu">OpeningMenu</string>
+    <string name="title_desc">Main title image</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_new_game_menu">NewGameMenu</string>
