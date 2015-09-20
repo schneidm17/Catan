@@ -11,6 +11,11 @@
     <string name="buyDevelopmentCard">Buy Development Card</string>
     <string name="trade">Trade</string>
     <string name="playDevelopmentCard">Play Development Card</string>
+    <string name="brickCardCount">5</string>
+    <string name="rockCardCount">5</string>
+    <string name="lumberCardCount">5</string>
+    <string name="sheepCardCount">5</string>
+    <string name="wheatCardCount">5</string>
 
     <!--Strings for game board arrow keys-->
     <string name="upArrow">↑</string>

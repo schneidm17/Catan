@@ -15,4 +15,8 @@
     <dimen name="opening_menu_button_width">400dp</dimen>
     <dimen name="new_game_option_width">490dp</dimen>
     <dimen name="new_game_switch_width">100dp</dimen>
+
+    <!--Dimensions for main game board-->
+    <dimen name="stub_dimen">60dp</dimen>
+    <dimen name="stub_padding">5dp</dimen>
 </resources>

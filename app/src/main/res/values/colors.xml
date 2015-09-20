@@ -8,4 +8,5 @@
     <color name="MenuColor">#ffffffb2</color>
     <color name="Black">#ff000000</color>
     <color name="ButtonColor">#ffE6E6A0</color>
+    <color name="gameBoardBackground">#ff00A1E1</color>
 </resources>
