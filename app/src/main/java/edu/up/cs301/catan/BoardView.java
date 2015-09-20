@@ -24,17 +24,5 @@ public class BoardView extends SurfaceView{
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         myGameBoard.drawBoard(canvas);
-
-    /*
-        Button upButton = (Button) findViewById(R.id.goUpButton);
-        upButton.setOnClickListener(new android.view.View.OnClickListener() {
-
-            @Override
-            public void onClick(android.view.View v) {
-                myGameBoard.rotateUp();
-            }
-      });
-    */
-
     }
 }

@@ -1,5 +1,7 @@
 package edu.up.cs301.catan;
 
+import android.graphics.Paint;
+
 /**
  * Created by schneidm17 on 9/15/2015.
  */
@@ -8,7 +10,28 @@ public class Graphics {
         this.phi = phi;
         this.theta = theta;
         updateABC();
-    }
+
+        wood = new Paint();
+        wheat = new Paint();
+        brick = new Paint();
+        stone = new Paint();
+        wool = new Paint();
+        sand = new Paint();
+
+        wood.setColor(0xFF466F37);
+        wheat.setColor(0xFFE7B23E);
+        brick.setColor(0xFFB16B32);
+        stone.setColor(0xFF969696);
+        wool.setColor(0xFF91C14B);
+        sand.setColor(0xFFE2C581);
+
+        wood.setStyle(Paint.Style.FILL);
+        wheat.setStyle(Paint.Style.FILL);
+        brick.setStyle(Paint.Style.FILL);
+        stone.setStyle(Paint.Style.FILL);
+        wool.setStyle(Paint.Style.FILL);
+        sand.setStyle(Paint.Style.FILL);
+}
 
     /*
      * The camera is stored in spherical coordinates as degrees {d, phi, theta}, which
@@ -30,6 +53,13 @@ public class Graphics {
     private double k3; //the coefficient for the i unit vector of getY()
     private double k4; //the coefficient for the j unit vector of getY()
     private double k5; //the coefficient for the k unit vector of getY()
+
+    public static Paint wood; //color of the wood squares
+    public static Paint wheat; //color of the wheat squares
+    public static Paint brick; //color of the brick squares
+    public static Paint stone; //color of the stone squares
+    public static Paint wool; //color of the wool squares
+    public static Paint sand; //color of the desert squares and the coast
 
     public static final double deg = 0.017453292519943295; //conversion factor for deg to rad
     public static final double r3 = Math.sqrt(3); //square root of 3
