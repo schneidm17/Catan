@@ -17,15 +17,13 @@
             android:screenOrientation="landscape" >
         </activity>
         <activity
-            android:name=".BankTradingScreen"
-            android:label="@string/title_activity_bank_trading_screen" >
+            android:name=".BankTradingScreen">
         </activity>
         <activity
             android:name=".OpeningMenu"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
