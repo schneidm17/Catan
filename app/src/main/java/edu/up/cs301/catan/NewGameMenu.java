@@ -6,6 +6,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Switch;
+
+import static edu.up.cs301.catan.R.id.hard_switch;
+import static edu.up.cs301.catan.R.id.hide_switch;
+import static edu.up.cs301.catan.R.id.nice_switch;
+import static edu.up.cs301.catan.R.id.random_switch;
 
 
 public class NewGameMenu extends ActionBarActivity {
@@ -23,6 +29,33 @@ public class NewGameMenu extends ActionBarActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+
+    /*
+     * All of the toggle methods below extend the clickable area
+     * for the toggleable options
+     */
+    public void toggleRandSwitch(View view){
+        Switch randSwitch = (Switch) findViewById(random_switch);
+        randSwitch.toggle();
+    }
+
+    public void toggleNiceSwitch(View view){
+        Switch niceSwitch = (Switch) findViewById(nice_switch);
+        niceSwitch.toggle();
+    }
+
+    public void toggleHardSwitch(View view){
+        Switch hardSwitch = (Switch) findViewById(hard_switch);
+        hardSwitch.toggle();
+    }
+
+    public void toggleHideSwitch(View view){
+        Switch hideSwitch = (Switch) findViewById(hide_switch);
+        hideSwitch.toggle();
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
