@@ -32,7 +32,7 @@
     <string name="acceptButton">Accept Trade</string>
     <string name="wantToTrade">You want to trade:</string>
     <string name="askingFor">You are asking for:</string>
-    <string name="returnToGame">Return to Game</string>
+    <string name="returnToGame">Cancel</string>
     <string name="player1TradeText">Player 1 will trade: Lumber</string>
     <string name="player2TradeText">Player 2 will not trade</string>
     <string name="player3TradeText">Player 3 will trade: Ore</string>

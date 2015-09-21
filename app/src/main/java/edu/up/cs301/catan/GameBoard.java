@@ -1,6 +1,8 @@
 package edu.up.cs301.catan;
 
+import android.annotation.TargetApi;
 import android.graphics.*;
+import android.os.Build;
 
 import static edu.up.cs301.catan.R.id.displayArea;
 
@@ -41,6 +43,8 @@ public class GameBoard extends Graphics {
     private Paint squareColor[] = {stone, wool, wood, wheat, brick, wool, brick,
             wheat, wood, sand, wood, stone, wood, stone, wheat, wool, brick, wheat, wool};
     int scale = 350;
+    int centerX;
+    int centerY;
 
     Paint thickStroke;
     Paint thinStroke;
@@ -50,7 +54,27 @@ public class GameBoard extends Graphics {
     Paint whitePlayer;
 
     public void drawBoard(Canvas canvas) {
+        centerX = canvas.getWidth() / 2;
+        centerY = canvas.getHeight() / 2;
         drawSquares(canvas);
+
+        for(int x=0; x<19; x++){
+            if(x!=9)
+                drawNumber(canvas, x, -1);
+        }
+
+        Path robber = new Path();
+        robber.moveTo(centerX, centerY - 30);
+        robber.lineTo(centerX + 30, centerY + 30);
+        robber.lineTo(centerX + 30, centerY + 50);
+        robber.lineTo(centerX - 30, centerY + 50);
+        robber.lineTo(centerX - 30, centerY + 30);
+        robber.close();
+        canvas.drawPath(robber, stone);
+        canvas.drawPath(robber, thinStroke);
+        canvas.drawOval(centerX-20, centerY-50, centerX+20, centerY-10, stone);
+        canvas.drawOval(centerX-20, centerY-50, centerX+20, centerY-10, thinStroke);
+
 
         drawRoad(canvas, redPlayer, 13);
         drawRoad(canvas, redPlayer, 41);
@@ -78,10 +102,18 @@ public class GameBoard extends Graphics {
         drawSet(canvas, orangePlayer, 42);
     }
 
-    public void drawRoad(Canvas canvas, Paint playerColor, int r) {
-        int centerX = canvas.getWidth() / 2;
-        int centerY = canvas.getHeight() / 2;
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public void drawNumber(Canvas canvas, int i, int n) {
+        double x = tiles[i][0];
+        double y = tiles[i][1];
 
+        canvas.drawOval(centerX + (float)(scale*getx(x,y,0))-50, centerY + (float)(scale*gety(x, y, 0))-50,
+                centerX + (float)(scale*getx(x,y,0))+50, centerY + (float)(scale*gety(x,y,0))+50, sand);
+        canvas.drawOval(centerX + (float)(scale*getx(x,y,0))-50, centerY + (float)(scale*gety(x, y, 0))-50,
+                centerX + (float)(scale*getx(x,y,0))+50, centerY + (float)(scale*gety(x,y,0))+50, thinStroke);
+    }
+
+    public void drawRoad(Canvas canvas, Paint playerColor, int r) {
         double x = sites[roads[r][0]][0];
         double y = sites[roads[r][0]][1];
         double i = sites[roads[r][1]][0] - x;
@@ -104,8 +136,8 @@ public class GameBoard extends Graphics {
     }
 
     public void drawSet(Canvas canvas, Paint playerColor, int n) {
-        float x = canvas.getWidth() / 2 + (float) (scale * getx(sites[n][0], sites[n][1], 0));
-        float y = canvas.getHeight() / 2 + (float) (scale * gety(sites[n][0], sites[n][1], 0));
+        float x = centerX + (float) (scale * getx(sites[n][0], sites[n][1], 0));
+        float y = centerY + (float) (scale * gety(sites[n][0], sites[n][1], 0));
 
         Path set = new Path();
         set.moveTo(x - scale / 15, y + scale / 15);
@@ -120,9 +152,6 @@ public class GameBoard extends Graphics {
     }
 
     public void drawSquares(Canvas canvas) {
-        int centerX = canvas.getWidth() / 2;
-        int centerY = canvas.getHeight() / 2;
-
         //draw the coastline
         Path coast = new Path();
         coast.moveTo(centerX + (float) (scale * getx(coastline[0][0], coastline[0][1], 0)),
@@ -152,6 +181,22 @@ public class GameBoard extends Graphics {
 
             canvas.drawPath(hex, squareColor[i]);
             canvas.drawPath(hex, thickStroke);
+        }
+
+
+        for (int i = 0; i<ports.length; i++) {
+            double x = ports[i][0];
+            double y = ports[i][1];
+
+
+            canvas.drawRect(centerX + (float) (scale * getx(x, y, 0)) - 35, centerY + (float) (scale * gety(x, y, 0)) + 5,
+                    centerX+(float)(scale*getx(x, y, 0)) + 35, centerY + (float) (scale * gety(x, y, 0)) + 25, brick);
+            canvas.drawRect(centerX + (float) (scale * getx(x, y, 0)) - 35, centerY + (float) (scale * gety(x, y, 0)) + 5,
+                    centerX + (float)(scale*getx(x, y, 0))+35, centerY+(float)(scale*gety(x, y,0))+25, thinStroke);
+            canvas.drawRect(centerX+(float)(scale*getx(x, y, 0))-25, centerY+(float)(scale*gety(x, y,0))-40,
+                    centerX+(float)(scale*getx(x, y, 0))+25, centerY+(float)(scale*gety(x, y,0))+10, whitePlayer);
+            canvas.drawRect(centerX+(float)(scale*getx(x, y, 0))-25, centerY+(float)(scale*gety(x, y,0))-40,
+                    centerX+(float)(scale*getx(x, y, 0))+25, centerY+(float)(scale*gety(x, y,0))+10, thinStroke);
         }
     }
 }
