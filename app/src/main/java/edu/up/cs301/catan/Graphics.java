@@ -3,7 +3,11 @@ package edu.up.cs301.catan;
 import android.graphics.Paint;
 
 /**
- * Created by schneidm17 on 9/15/2015.
+ * @author Matthew Schneider
+ * @version 9/15/2015
+ *
+ * @deprecated 10/22/2015
+ * @see GameSurfaceView
  */
 public class Graphics {
     public Graphics(int phi, int theta) {

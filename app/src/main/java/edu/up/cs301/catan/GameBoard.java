@@ -9,7 +9,11 @@ import static edu.up.cs301.catan.R.id.displayArea;
 /**
  * This is the base class for the entire game board
  * <p/>
- * Created by schneidm17 on 9/13/2015.
+ * @author schneidm17
+ * @version 9/13/2015
+ *
+ * @deprecated 10/22/2015
+ * @see GameSurfaceView
  */
 public class GameBoard extends Graphics {
     public GameBoard(int phi, int theta) {

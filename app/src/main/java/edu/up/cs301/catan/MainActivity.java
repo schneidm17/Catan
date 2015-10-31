@@ -1,6 +1,7 @@
 package edu.up.cs301.catan;
 
 import android.content.Intent;
+import android.graphics.Canvas;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -12,16 +13,35 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.PopupWindow;
 
-/* @author: Jordan Goldey, Jarrett Oney, Matthew Schneider
- * @date: 9/19/2015
- * @purpose: Contains the main game board, the action menu, player stats, etc.
+/**
+ * Contains the main game board, the action menu, player stats, etc.
+ *
+ * @author Matthew Schneider, Jordan Goldey, Jarrett Oney
+ * @version 10/23/2015
  */
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+
+    GameSurfaceView mySurfaceView;
+    Button rotateUpButton;
+    Button rotateRightButton;
+    Button rotateDownButton;
+    Button rotateLeftButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mySurfaceView = (GameSurfaceView) findViewById(R.id.displayArea);
+        rotateUpButton = (Button) findViewById(R.id.goUpButton);
+        rotateRightButton = (Button) findViewById(R.id.goRightButton);
+        rotateDownButton = (Button) findViewById(R.id.goDownButton);
+        rotateLeftButton = (Button) findViewById(R.id.goLeftButton);
+
+        rotateUpButton.setOnClickListener(this);
+        rotateRightButton.setOnClickListener(this);
+        rotateDownButton.setOnClickListener(this);
+        rotateLeftButton.setOnClickListener(this);
 
         goToTradingPopup();
     }//onCreate
@@ -29,7 +49,7 @@ public class MainActivity extends ActionBarActivity {
     //Function to open a popup containing the trading options
     private void goToTradingPopup() {
         //Sets a listener on the button to open the trade popup
-        final Button btnOpenPopup = (Button)findViewById(R.id.tradeButton);
+        final Button btnOpenPopup = (Button) findViewById(R.id.tradeButton);
         btnOpenPopup.setOnClickListener(new Button.OnClickListener() {
 
             @Override
@@ -38,7 +58,7 @@ public class MainActivity extends ActionBarActivity {
 
                 //Opens up the popup at the center of the screen
                 View popupView = layoutInflater.inflate(R.layout.activity_trade_popup, null);
-                final PopupWindow popupWindow = new PopupWindow(popupView,ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                final PopupWindow popupWindow = new PopupWindow(popupView, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
 
                 //Dismisses the popup when the return to game button is clicked
@@ -99,4 +119,28 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }//onOptionsItemSelected
 
-}//MainActivity
+    @Override
+    public void onClick(View v) {
+        if (v.equals(rotateUpButton)) {
+            Canvas myCanvas = mySurfaceView.getHolder().lockCanvas();
+            mySurfaceView.rotateUp();
+            mySurfaceView.getHolder().unlockCanvasAndPost(myCanvas);
+            mySurfaceView.postInvalidate();
+        } else if (v.equals(rotateRightButton)) {
+            Canvas myCanvas = mySurfaceView.getHolder().lockCanvas();
+            mySurfaceView.rotateRight();
+            mySurfaceView.getHolder().unlockCanvasAndPost(myCanvas);
+            mySurfaceView.postInvalidate();
+        } else if (v.equals(rotateDownButton)) {
+            Canvas myCanvas = mySurfaceView.getHolder().lockCanvas();
+            mySurfaceView.rotateDown();
+            mySurfaceView.getHolder().unlockCanvasAndPost(myCanvas);
+            mySurfaceView.postInvalidate();
+        } else if (v.equals(rotateLeftButton)) {
+            Canvas myCanvas = mySurfaceView.getHolder().lockCanvas();
+            mySurfaceView.rotateLeft();
+            mySurfaceView.getHolder().unlockCanvasAndPost(myCanvas);
+            mySurfaceView.postInvalidate();
+        }
+    }
+}
